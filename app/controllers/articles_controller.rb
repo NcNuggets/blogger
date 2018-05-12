@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  before_action :require_login, except: [:index, :show]
+
 # Add the Articles Helper class so that we can use 'article_params'
   include ArticlesHelper
 
